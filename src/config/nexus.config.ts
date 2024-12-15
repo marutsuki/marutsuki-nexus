@@ -12,8 +12,20 @@ export type NexusConfig = {
 export const config: NexusConfig = {
   items: [
     {
-      label: {
+      value: {
         label: "General Portfolio",
+      },
+      onClick: () => {},
+    },
+    {
+      value: {
+        label: "Art Portfolio",
+      },
+      onClick: () => {},
+    },
+    {
+      value: {
+        label: "Modelling Portfolio",
       },
       onClick: () => {},
     },

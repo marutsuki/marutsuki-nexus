@@ -7,8 +7,11 @@
   const { items, renderer } = config;
 </script>
 
-<main>
-  <h1>marutsuki</h1>
-  <h2>NEXUS</h2>
+<main class="flex flex-col gap-12">
+  <section>
+    <h1>marutsuki</h1>
+    <h2>NEXUS</h2>
+  </section>
+
   <TypedListMenu {items} {renderer} />
 </main>
