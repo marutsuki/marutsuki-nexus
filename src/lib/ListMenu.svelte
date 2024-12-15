@@ -31,9 +31,9 @@
     <menuitem class="cursor-pointer p-4 relative group" onclick={item.onClick}>
       <div
         class={clsx(
-          `duration-500 opacity-0 group-hover:opacity-100 absolute inset-0 -z-10 ease-overshoot
+          `duration-500 opacity-0 group-hover:opacity-100 absolute inset-0 z-10 ease-overshoot
         group-hover:scale-y-[90%] group-hover:scale-x-[110%]
-        after:content-normal after:absolute after:-inset-2 after:drop-shadow-lg after:-z-20 after:opacity-50 after:blur-md`,
+        after:content-normal after:absolute after:-inset-2 after:drop-shadow-lg after:opacity-50 after:blur-md`,
           {
             [rotateStyles[0]]: index % 2 === 0,
             [rotateStyles[1]]: index % 2 === 1,
@@ -45,7 +45,9 @@
           }
         )}
       ></div>
-      <h2 class="text-lg group-hover:text-white drop-shadow-lg font-text">
+      <h2
+        class="dark:text-white text-lg z-20 relative group-hover:text-white drop-shadow-lg font-text"
+      >
         {@render renderer(item.value)()}
       </h2>
     </menuitem>
