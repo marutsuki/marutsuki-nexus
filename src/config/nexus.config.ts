@@ -15,19 +15,19 @@ export const config: NexusConfig = {
       value: {
         label: "General Portfolio",
       },
-      onClick: () => {},
+      onClick: () => window.open("https://main.marutsuki.io"),
     },
     {
       value: {
         label: "Art Portfolio",
       },
-      onClick: () => {},
+      onClick: () => window.open("https://art.marutsuki.io"),
     },
     {
       value: {
         label: "Modelling Portfolio",
       },
-      onClick: () => {},
+      onClick: () => window.open("https://modelling.marutsuki.io"),
     },
   ],
   renderer: (item: NexusMenuItem) =>
