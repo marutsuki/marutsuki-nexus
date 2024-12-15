@@ -45,7 +45,7 @@
           }
         )}
       ></div>
-      <h2 class="text-lg group-hover:text-white drop-shadow-lg">
+      <h2 class="text-lg group-hover:text-white drop-shadow-lg font-text">
         {@render renderer(item.value)()}
       </h2>
     </menuitem>
