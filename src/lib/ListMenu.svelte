@@ -26,7 +26,7 @@
   ];
 </script>
 
-<menu class="flex flex-col gap-2">
+<menu class="flex flex-col gap-2 place-self-center">
   {#each items as item, index}
     <menuitem class="cursor-pointer p-4 relative group" onclick={item.onClick}>
       <div
