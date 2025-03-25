@@ -19,6 +19,12 @@ export const config: NexusConfig = {
     },
     {
       value: {
+        label: "Tutoring Portfolio",
+      },
+      onClick: () => window.open("https://tutoring.marutsuki.io")
+    },
+    {
+      value: {
         label: "Art Portfolio",
       },
       onClick: () => window.open("https://art.marutsuki.io"),
