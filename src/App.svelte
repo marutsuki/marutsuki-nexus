@@ -16,11 +16,11 @@
 </script>
 
 <main class={clsx("flex flex-col gap-12", $mode)}>
-  <section class="place-items-center">
+  <section class="place-items-center animate-fadein">
     <InteractiveLogo />
     <h1 class="font-display dark:text-white">marutsuki</h1>
     <h2 class="font-text dark:text-white">NEXUS</h2>
   </section>
 
-  <TypedListMenu {items} {renderer} />
+  <section class="animate-fadein"><TypedListMenu {items} {renderer} /></section>
 </main>

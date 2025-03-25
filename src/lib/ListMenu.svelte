@@ -24,11 +24,19 @@
     "bg-gradient2 after:bg-gradient2",
     "bg-gradient3 after:bg-gradient3",
   ];
+
+  const animateStyles = ["animate-slidein", "animate-slidein-right"];
 </script>
 
 <menu class="flex flex-col gap-2 place-self-center">
   {#each items as item, index}
-    <menuitem class="cursor-pointer p-4 relative group" onclick={item.onClick}>
+    <menuitem
+      class={clsx("cursor-pointer p-4 relative group", {
+        [animateStyles[0]]: index % 2 === 0,
+        [animateStyles[1]]: index % 2 === 1,
+      })}
+      onclick={item.onClick}
+    >
       <div
         class={clsx(
           `duration-500 opacity-0 group-hover:opacity-100 absolute inset-0 z-10 ease-overshoot
