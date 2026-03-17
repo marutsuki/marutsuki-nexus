@@ -28,9 +28,9 @@
   const animateStyles = ["animate-slidein", "animate-slidein-right"];
 </script>
 
-<menu class="flex flex-col gap-2 place-self-center">
+<ul class="flex flex-col gap-2 place-self-center">
   {#each items as item, index}
-    <menuitem
+    <li
       class={clsx("cursor-pointer p-4 relative group", {
         [animateStyles[0]]: index % 2 === 0,
         [animateStyles[1]]: index % 2 === 1,
@@ -58,6 +58,6 @@
       >
         {@render renderer(item.value)()}
       </h2>
-    </menuitem>
+    </li>
   {/each}
-</menu>
+</ul>
