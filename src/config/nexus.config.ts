@@ -31,12 +31,6 @@ export const config: NexusConfig = {
     },
     {
       value: {
-        label: "Art Portfolio",
-      },
-      onClick: () => window.open("https://art.marutsuki.io"),
-    },
-    {
-      value: {
         label: "Modelling Portfolio",
       },
       onClick: () => window.open("https://modelling.marutsuki.io"),
