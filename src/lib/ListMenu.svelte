@@ -1,5 +1,4 @@
 <script lang="ts" generics="T">
-  import type { Snippet } from "svelte";
   import clsx from "clsx";
 
   type ListMenuItem = {
@@ -9,7 +8,6 @@
 
   type Props = {
     items: ListMenuItem[];
-    renderer: (item: T) => Snippet<[]>;
   };
 
   let { items }: Props = $props();
