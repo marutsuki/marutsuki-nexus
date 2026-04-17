@@ -26,7 +26,7 @@
   const animateStyles = ["animate-slidein", "animate-slidein-right"];
 </script>
 
-<ul class="flex flex-col gap-2 place-self-center">
+<ul class="flex flex-col items-center gap-2 place-self-center">
   {#each items as item, index}
     <li
       class={clsx("cursor-pointer relative group w-96 h-16", {

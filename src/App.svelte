@@ -17,9 +17,10 @@
 </script>
 
 <main class={clsx("flex flex-col gap-4", $mode)}>
-  <section class="place-items-center animate-fadein">
+  <section class="flex flex-col items-center place-items-center animate-fadein">
     <InteractiveLogo />
-    <h1 class="font-display dark:text-white">marutsuki</h1>
+    <h1 class="font-display dark:text-white flex flex-col items-center">marutsuki</h1>
+    <h2 class="font-display text-xl dark:text-white">Engineer | Digital Artist | Musician</h2>
     <div class="my-2 flex gap-2 justify-center">
       <a
         href="https://github.com/marutsuki"
@@ -64,7 +65,20 @@
     </div>
   </section>
 
+  <section class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+    <h2 class="sr-only">Core Disciplines</h2>
+    <p>
+      Engineering software systems and processes through controlled sub-agent orchestration when possible and by hand when critical.
+    </p>
+    <p>
+      Cutting away at the hours lost to predictable BAU work through automation, and enabling the capacity for innovation beyond maintenance.
+    </p>
+    <p>
+      Exploring the intersection of immersive digital art and music, blending technology with creativity to craft unique experiences.
+    </p>
+  </section>
   <section class="animate-fadein"><TypedListMenu {items} /></section>
+
 </main>
 
 <footer class="fixed left-0 bottom-0 px-8 py-4 w-full flex flex-row justify-between items-center text-base">
