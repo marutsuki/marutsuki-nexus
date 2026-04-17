@@ -81,18 +81,16 @@
 
 </main>
 
-<footer class="fixed left-0 bottom-0 px-8 py-4 w-full flex flex-row justify-between items-center text-base">
+<footer class={clsx("fixed left-0 bottom-0 px-8 py-4 w-full flex flex-row justify-between items-center text-base", $mode)}>
   <p class="text-center dark:text-white">
     &copy; 2025-2026 Marutsuki. All rights reserved.
   </p>
   <div class="flex flex-row gap-4">
-    <div>
-      <a href="https://bucket.marutsuki.com/sitemap.xml" target="_blank" rel="noopener noreferrer" class="dark:text-white hover:underline">
-        Sitemap
-      </a>
-      <a href="https://bucket.marutsuki.com/robots.txt" target="_blank" rel="noopener noreferrer" class="dark:text-white hover:underline">
-        Robots.txt
-      </a>
-    </div>
+    <a href="https://bucket.marutsuki.com/sitemap.xml" target="_blank" rel="noopener noreferrer" class="dark:text-white hover:underline italic">
+      Sitemap
+    </a>
+    <a href="https://bucket.marutsuki.com/robots.txt" target="_blank" rel="noopener noreferrer" class="dark:text-white hover:underline italic">
+      Robots.txt
+    </a>
   </div>
 </footer>
