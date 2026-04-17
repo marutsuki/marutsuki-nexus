@@ -3,8 +3,8 @@
   import clsx from "clsx";
 
   type ListMenuItem = {
-    value: T;
-    onClick: () => void;
+    label: string;
+    href: string;
   };
 
   type Props = {
@@ -12,7 +12,7 @@
     renderer: (item: T) => Snippet<[]>;
   };
 
-  let { items, renderer }: Props = $props();
+  let { items }: Props = $props();
 
   const rotateStyles = [
     "group-hover:rotate-[5deg]",
@@ -31,11 +31,10 @@
 <ul class="flex flex-col gap-2 place-self-center">
   {#each items as item, index}
     <li
-      class={clsx("cursor-pointer p-4 relative group", {
+      class={clsx("cursor-pointer relative group w-96 h-16", {
         [animateStyles[0]]: index % 2 === 0,
         [animateStyles[1]]: index % 2 === 1,
       })}
-      onclick={item.onClick}
     >
       <div
         class={clsx(
@@ -53,11 +52,14 @@
           }
         )}
       ></div>
-      <h2
-        class="dark:text-white text-lg z-20 relative group-hover:text-white drop-shadow-lg font-text"
+      <a
+        href={item.href} target="_blank" rel="noopener noreferrer"
+        class="flex w-full h-full dark:text-white text-lg z-20 relative group-hover:text-white drop-shadow-lg font-text flex-col items-center justify-center"
       >
-        {@render renderer(item.value)()}
-      </h2>
+        <span class="block align-middle">
+          {item.label}
+        </span>
+      </a>
     </li>
   {/each}
 </ul>

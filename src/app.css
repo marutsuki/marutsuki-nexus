@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -17,7 +17,7 @@
   );
   --background-image-gradient3: linear-gradient(to right, #bdc3c7, #2c3e50);
   --background-image-logo-gradient: linear-gradient(to right, #fc00ff, #00dbde);
-  --background-image-logo: url('../public/marutsuki.png');
+  --background-image-logo: url("../public/marutsuki.png");
 
   --font-display: Jura, mono;
   --font-text: Red Hat Text, mono;
@@ -44,6 +44,7 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+    box-sizing: border-box;
   }
 }
 

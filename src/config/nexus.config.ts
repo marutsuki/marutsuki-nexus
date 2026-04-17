@@ -3,41 +3,29 @@ import ListMenu from "../lib/ListMenu.svelte";
 
 export type NexusMenuItem = {
   label: string;
+  href: string;
 };
 export type NexusConfig = {
   items: ComponentProps<ListMenu<NexusMenuItem>>["items"];
-  renderer: (item: NexusMenuItem) => Snippet;
 };
 
 export const config: NexusConfig = {
   items: [
     {
-      value: {
-        label: "General Portfolio",
-      },
-      onClick: () => window.open("https://main.marutsuki.io"),
+      label: "General Portfolio",
+      href: "https://portfolio.marutsuki.com",
     },
     {
-      value: {
-        label: "Professional Portfolio",
-      },
-      onClick: () => window.open("https://lucienlu.marutsuki.io"),
+      label: "Professional Portfolio",
+      href: "https://lucienlu.marutsuki.com",
     },
     {
-      value: {
-        label: "Tutoring Portfolio",
-      },
-      onClick: () => window.open("https://tutoring.marutsuki.io"),
+      label: "Tutoring Portfolio",
+      href: "https://tutoring.marutsuki.com",
     },
     {
-      value: {
-        label: "Art Portfolio",
-      },
-      onClick: () => window.open("https://art.marutsuki.io"),
+      label: "Art Portfolio",
+      href: "https://art.marutsuki.com",
     },
   ],
-  renderer: (item: NexusMenuItem) =>
-    createRawSnippet(() => ({
-      render: () => item.label,
-    })),
 };
